@@ -10,7 +10,7 @@ console.log(Contador)
 }
 
   return (
-    <button onClick={manexadorBoton}> {props.NombreBoton} {props.Contador && <span>({Contador})</span>}</button>
+    <button onClick={manexadorBoton} className="btn btn-outline-primary"> {props.NombreBoton} {props.Contador && <span className="badge badge-pill badge-dark">{Contador}</span>}</button>
   );
 }
 

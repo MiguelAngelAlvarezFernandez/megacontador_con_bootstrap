@@ -40,16 +40,18 @@ function App() {
 
 
   return (
-    <main>
-    <h1>MEGACONTADOR</h1>
-    <div>
-      <p> {valorActual}</p>
-      <span><Boton  NombreBoton="+" YDespuesDeContar={Aumentar} Contador/></span>
-      <span><Boton NombreBoton="-" YDespuesDeContar={Disminuir} Contador/></span>
-      <span><Boton NombreBoton="Reset" YDespuesDeContar={Resetear}/></span>
+    <main className="container">
+      <h1 className="row d-flex flex-row justify-content-center alig-items-center">MEGACONTADOR</h1>
+      <p className="row d-flex flex-row justify-content-center alig-items-center"> {valorActual}</p>
+      <div className="row d-flex flex-row justify-content-center alig-items-center m-3">
+      <span className="col d-flex flex-row justify-content-center alig-items-center"><Boton  NombreBoton="+" YDespuesDeContar={Aumentar} Contador/></span>
+      <span className="col d-flex flex-row justify-content-center alig-items-center"><Boton NombreBoton="-" YDespuesDeContar={Disminuir} Contador/></span>
+      </div>
+      <div className="row d-flex flex-row justify-content-center alig-items-center">
+      <Boton NombreBoton="Reset" YDespuesDeContar={Resetear}/>
       {Cronometro===false && <Boton NombreBoton="Cronometro ON" YDespuesDeContar={ActivarCronometro}/>}
       {Cronometro===true && <Boton NombreBoton="Cronometro OFF" YDespuesDeContar={ActivarCronometro}/>}
-    </div>
+      </div>
     </main>
   );
 }
